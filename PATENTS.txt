@@ -1,0 +1,3 @@
+This project is subject to the terms of the MIT license, found in the LICENSE file.
+
+The use of this software may also be subject to patent rights held by Anurag Dongare. The license granted herein under the MIT license is a copyright license and does not grant any rights to these patents. A separate patent license may be required for certain commercial uses.
