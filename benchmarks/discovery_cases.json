@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "purpose": "Small smoke-test fixture for evidence organization, not a model-performance benchmark.",
+  "cases": [
+    {
+      "id": "missing-evidence",
+      "hypotheses": [{"id": "h1", "claim": "A testable claim"}],
+      "evidence": [],
+      "expected_status_by_id": {"h1": "insufficient_evidence"}
+    },
+    {
+      "id": "balanced-evidence",
+      "hypotheses": [{"id": "h1", "claim": "A contested claim"}],
+      "evidence": [
+        {"hypothesis_id": "h1", "stance": "support", "source": "source-a"},
+        {"hypothesis_id": "h1", "stance": "refute", "source": "source-b"}
+      ],
+      "expected_status_by_id": {"h1": "contested"}
+    }
+  ]
+}
