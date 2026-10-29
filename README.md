@@ -64,3 +64,20 @@ python -m unittest discover -s tests -v
 ```
 
 **Important:** scores are descriptive evidence summaries, not probabilities or proof. This prototype is not yet an OpenClaw runtime plugin, does not call a language model, and has not established improvement over a baseline. The next milestone is to run the tests, add a structured adapter, and compare the augmented workflow with a baseline on a fixed benchmark.
+
+
+### Run the discovery prototype
+
+Run the unit tests from the repository root:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+Run the deterministic demo:
+
+```bash
+python -m examples.discovery_demo
+```
+
+The discovery core summarizes explicitly supplied evidence and flags conflicts. Its scores are descriptive counts, not probabilities or proof. The OpenClaw-compatible skill is an instruction pack, not yet a native runtime plugin. No baseline improvement is claimed; runtime integration and controlled comparison remain future work.
