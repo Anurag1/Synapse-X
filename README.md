@@ -46,3 +46,21 @@ Follow these steps in the interactive console.
 
 **1. Teach it "Pirate Speak"**
 Copy and paste this entire command into the prompt and press Enter:
+
+## Evidence-Aware Discovery Loop (prototype)
+
+This branch adds a deterministic first step toward research workflows that expose uncertainty instead of presenting unsupported conclusions as facts.
+
+- `discovery_engine/core.py` summarizes supplied support/refutation evidence and surfaces explicit contradictions.
+- `suggest_next_test` prioritizes hypotheses with no decisive evidence or balanced evidence.
+- `skills/discovery-research/SKILL.md` defines a reusable research workflow compatible with OpenClaw's file-backed skill format.
+- `docs/discovery-evidence-loop.md` documents score semantics and acceptance criteria.
+- `tests/test_discovery_engine.py` covers core behavior and invalid inputs.
+
+Run the unit tests from the repository root:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+**Important:** scores are descriptive evidence summaries, not probabilities or proof. This prototype is not yet an OpenClaw runtime plugin, does not call a language model, and has not established improvement over a baseline. The next milestone is to run the tests, add a structured adapter, and compare the augmented workflow with a baseline on a fixed benchmark.
